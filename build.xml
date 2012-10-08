@@ -1,0 +1,18 @@
+<project name="bomberman" default="all" basedir=".">
+
+	<target name="all">
+		<mkdir dir="bin"/>
+		<javac debug="true" debuglevel="lines,vars,source"
+			srcdir="." destdir="bin" includeantruntime="false"/>
+		<jar jarfile="bomber.jar" basedir="bin">
+			<manifest>
+				<attribute name="Main-Class" value="Client"/>
+			</manifest>
+		</jar>
+	</target>
+	
+	<target name="clean">
+		<delete dir="bin"/>
+	</target>
+	
+</project>
